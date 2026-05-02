@@ -1,0 +1,245 @@
+{
+  "categorias": {
+    "patrimonio": {
+      "nombre": "Patrimonio e Historia",
+      "emoji": "🔶",
+      "color": "#E8A020"
+    },
+    "activismo": {
+      "nombre": "Activismo",
+      "emoji": "✊🏿",
+      "color": "#C0392B"
+    },
+    "feminismo": {
+      "nombre": "Feminismo",
+      "emoji": "♀️",
+      "color": "#8E44AD"
+    },
+    "arte_urbano": {
+      "nombre": "Arte Urbano",
+      "emoji": "🎨",
+      "color": "#27AE60"
+    }
+  },
+  "preguntas": [
+    {
+      "id": 1,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué es el Plan Bidagor?",
+      "opciones": [
+        "Un sistema de planificación urbana basado en el principio \"Bi-Da-Gor\": Bifurcar, Dar forma y Gobernar la ciudad desde el aire",
+        "Un proyecto para construir un paseo marítimo en Bravo Murillo con playa artificial y chiringuitos",
+        "Un plan urbanístico de posguerra que dividió Tetuán en zonas más favorecidas para las élites del régimen y la zona pobre y popular"
+      ],
+      "correcta": 2,
+      "curiosidad": "El Plan Bidagor (1941) fue el primer plan de ordenación urbana de Madrid en la posguerra, y marcó una división social muy clara en el barrio de Tetuán."
+    },
+    {
+      "id": 2,
+      "categoria": "patrimonio",
+      "pregunta": "¿Por qué el Plan Bidagor se llamaba \"Bidagor\"?",
+      "opciones": [
+        "Porque era un acrónimo técnico que significaba \"Bifurcación, Dirección y Ordenación General de la Región\"",
+        "Porque lo apodaron \"vida-gorda\": una forma de decir que habría una zona con \"vida de ricos\"",
+        "Por el apellido de su principal impulsor, Pedro Bidagor, arquitecto y urbanista del régimen"
+      ],
+      "correcta": 2,
+      "curiosidad": "Pedro Bidagor Lasarte fue el arquitecto jefe del Plan General de Ordenación Urbana de Madrid de 1941, vinculado al régimen franquista."
+    },
+    {
+      "id": 3,
+      "categoria": "patrimonio",
+      "pregunta": "¿En qué línea de metro de Madrid se encuentra la parada de Tetuán?",
+      "opciones": [
+        "Línea 1",
+        "Línea 6",
+        "Línea 8",
+        "Línea 4"
+      ],
+      "correcta": 0,
+      "curiosidad": "La línea 1 es la más antigua del metro de Madrid, inaugurada en 1919. Su color característico es el azul oscuro."
+    },
+    {
+      "id": 4,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué estilo arquitectónico caracteriza muchos de los edificios de viviendas obreras de Tetuán de principios del siglo XX?",
+      "opciones": [
+        "Modernismo catalán",
+        "Neomudéjar popular",
+        "Art Déco",
+        "Racionalismo"
+      ],
+      "correcta": 1,
+      "curiosidad": "El neomudéjar popular se caracteriza por el uso del ladrillo visto con decoraciones de inspiración árabe, muy común en la arquitectura humilde madrileña."
+    },
+    {
+      "id": 5,
+      "categoria": "patrimonio",
+      "pregunta": "¿Cuándo comenzó el barrio de Tetuán a integrarse oficialmente como parte del municipio de Madrid?",
+      "opciones": [
+        "1860",
+        "1948",
+        "1923",
+        "1900"
+      ],
+      "correcta": 1,
+      "curiosidad": "Tetuán fue un municipio independiente durante mucho tiempo antes de ser anexionado definitivamente a Madrid en 1948."
+    },
+    {
+      "id": 6,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué elemento urbano paradójico es muy característico de las aceras de Tetuán y símbolo de su peculiar urbanismo?",
+      "opciones": [
+        "Fuentes con agua",
+        "Torretas eléctricas en mitad de la acera",
+        "Semáforos dobles",
+        "Buzones pintados"
+      ],
+      "correcta": 1,
+      "curiosidad": "Las torretas eléctricas en plena acera son un vestigio de cuando el barrio se urbanizó de forma desordenada, y siguen siendo un obstáculo cotidiano para los vecinos."
+    },
+    {
+      "id": 7,
+      "categoria": "patrimonio",
+      "pregunta": "¿De qué zona geográfica procede la mayoría de la primera oleada de migrantes que pobló Tetuán en el siglo XX?",
+      "opciones": [
+        "Galicia y Asturias",
+        "Andalucía y Murcia",
+        "Extremadura y Castilla",
+        "País Vasco y Navarra"
+      ],
+      "correcta": 1,
+      "curiosidad": "Tetuán fue destino de miles de migrantes del sur que buscaban trabajo en la capital, dándole al barrio su carácter popular y diverso."
+    },
+    {
+      "id": 8,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué mercado tradicional es un punto de referencia histórico y comercial del barrio de Tetuán?",
+      "opciones": [
+        "Mercado de Maravillas",
+        "Mercado de Vallehermoso",
+        "Mercado de Antón Martín",
+        "Mercado de La Paz"
+      ],
+      "correcta": 0,
+      "curiosidad": "El Mercado de Maravillas es uno de los mercados más grandes de Madrid y sigue siendo el corazón comercial de Tetuán."
+    },
+    {
+      "id": 9,
+      "categoria": "patrimonio",
+      "pregunta": "¿Cómo se llama realmente la plaza de las Palomas?",
+      "opciones": [
+        "Plaza de Isabel II",
+        "Plaza de Bravo Murillo",
+        "Plaza del Canal de Isabel II",
+        "Plaza de la Remonta"
+      ],
+      "correcta": 2,
+      "curiosidad": "La famosa «plaza de las Palomas» debe su nombre popular a sus habitantes alados, pero oficialmente es la Plaza del Canal de Isabel II."
+    },
+    {
+      "id": 10,
+      "categoria": "activismo",
+      "pregunta": "¿Qué movimiento vecinal histórico de Tetuán fue pionero en la lucha por los derechos urbanos en Madrid durante los años 70?",
+      "opciones": [
+        "Asociación de Vecinos de Tetuán",
+        "Plataforma Norte",
+        "Coordinadora de Barrios",
+        "Frente de Barrio"
+      ],
+      "correcta": 0,
+      "curiosidad": "Las asociaciones vecinales de barrios como Tetuán jugaron un papel clave en la transición democrática española, exigiendo servicios básicos y participación ciudadana."
+    },
+    {
+      "id": 11,
+      "categoria": "activismo",
+      "pregunta": "¿Qué problemática social ha protagonizado movilizaciones vecinales recientes en Tetuán?",
+      "opciones": [
+        "La contaminación del río Manzanares",
+        "La gentrificación y el acceso a la vivienda",
+        "El cierre del mercado de Maravillas",
+        "La supresión de líneas de autobús"
+      ],
+      "correcta": 1,
+      "curiosidad": "Como en otros barrios populares de Madrid, los vecinos de Tetuán han organizado resistencia frente a la especulación inmobiliaria y las subidas de alquiler."
+    },
+    {
+      "id": 12,
+      "categoria": "activismo",
+      "pregunta": "¿Qué espacio autogestionado de Tetuán ha sido históricamente un centro de cultura y activismo de base?",
+      "opciones": [
+        "La Tabacalera",
+        "El Patio Maravillas",
+        "El Eko",
+        "La Enredadera"
+      ],
+      "correcta": 3,
+      "curiosidad": "La Enredadera es un espacio comunitario autogestionado en Tetuán que ha acogido iniciativas vecinales, culturales y de activismo de base."
+    },
+    {
+      "id": 13,
+      "categoria": "activismo",
+      "pregunta": "¿Qué lucha protagonizaron vecinas y vecinos de Tetuán en relación al espacio público durante los últimos años?",
+      "opciones": [
+        "Recuperar solares abandonados como huertos urbanos",
+        "Cerrar el aeropuerto de Barajas",
+        "Prohibir los patinetes eléctricos",
+        "Eliminar el parking del Bernabéu"
+      ],
+      "correcta": 0,
+      "curiosidad": "Los huertos comunitarios en solares vacíos han sido una forma de activismo urbano que reivindica el verde y la comunidad frente a la especulación."
+    },
+    {
+      "id": 14,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué cantante nacida en el barrio de Tetuán de Madrid fue un icono de la canción española y latinoamericana?",
+      "opciones": [
+        "Lola Flores",
+        "Rocío Dúrcal",
+        "Concha Piquer",
+        "Isabel Pantoja"
+      ],
+      "correcta": 1,
+      "curiosidad": "Rocío Dúrcal nació en 1944 en el barrio de Tetuán de Madrid. Su nombre artístico viene de una aldea asturiana, pero sus raíces están en este barrio."
+    },
+    {
+      "id": 15,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué porcentaje aproximado de las calles de Madrid llevan nombre de mujer?",
+      "opciones": [
+        "Menos del 15%",
+        "Alrededor del 25%",
+        "Casi el 50%",
+        "Más del 60%"
+      ],
+      "correcta": 0,
+      "curiosidad": "En la mayoría de ciudades españolas, menos del 15% de las calles llevan nombre de mujer, reflejo de la invisibilización histórica femenina."
+    },
+    {
+      "id": 16,
+      "categoria": "arte_urbano",
+      "pregunta": "¿Qué característica hace del barrio de Tetuán un espacio especialmente atractivo para el arte urbano?",
+      "opciones": [
+        "Sus grandes avenidas arboladas",
+        "Sus medianeras y fachadas ciegas de edificios",
+        "Sus túneles de metro",
+        "Sus puentes sobre el río"
+      ],
+      "correcta": 1,
+      "curiosidad": "Las medianeras —paredes laterales de los edificios sin ventanas— son el lienzo favorito de los muralistas urbanos. Tetuán tiene muchas por su tipología constructiva."
+    },
+    {
+      "id": 17,
+      "categoria": "arte_urbano",
+      "pregunta": "¿Qué tipo de mensaje suelen transmitir los murales de contenido social en barrios como Tetuán?",
+      "opciones": [
+        "Publicidad encubierta",
+        "Reivindicaciones vecinales, antirracismo y feminismo",
+        "Promoción turística",
+        "Historia oficial del barrio"
+      ],
+      "correcta": 1,
+      "curiosidad": "El arte urbano de contenido social convierte las paredes en herramienta de denuncia y visibilización de luchas colectivas."
+    }
+  ]
+}

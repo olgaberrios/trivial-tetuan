@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivial Tetuán</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --patrimonio:   #E8A020;
+    --activismo:    #C0392B;
+    --feminismo:    #8E44AD;
+    --arte:         #2196A0;
+
+    --bg:           #F5F0E8;
+    --bg2:          #EDE8DC;
+    --surface:      #FFFFFF;
+    --surface2:     #FAF7F2;
+    --border:       rgba(0,0,0,0.10);
+    --border-med:   rgba(0,0,0,0.18);
+    --text:         #1C1714;
+    --text2:        #5A5047;
+    --text3:        #9A8F84;
+
+    --metro-red:    #DA0000;
+    --metro-blue:   #003DA5;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Subtle paper texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(232,160,32,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 100%, rgba(142,68,173,0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Trivial pie decoration — decorative quarter-circles */
+  .pie-deco {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .pie-deco.tl { top: -80px; left: -80px; }
+  .pie-deco.br { bottom: -80px; right: -80px; transform: rotate(180deg); }
+
+  .container {
+    position: relative;
+    z-index: 10;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* METRO STRIP */
+  .metro-strip {
+    height: 5px;
+    background: linear-gradient(90deg, var(--metro-red) 50%, var(--metro-blue) 50%);
+    position: relative;
+    z-index: 10;
+  }
+
+  /* ===================== PORTADA ===================== */
+  #screen-portada {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 48px 20px 40px;
+  }
+
+  .portada-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Pie chart trivial decorativo */
+  .trivial-pie {
+    display: block;
+    margin: 0 auto 32px;
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.15));
+    animation: floatPie 4s ease-in-out infinite;
+  }
+
+  @keyframes floatPie {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .title-main {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(52px, 13vw, 96px);
+    line-height: 0.92;
+    color: var(--text);
+    text-align: center;
+    letter-spacing: -1px;
+  }
+
+  .title-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--text3);
+    text-align: center;
+    margin-top: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .title-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0;
+  }
+  .title-divider::before, .title-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-med);
+  }
+  .title-divider span {
+    font-size: 18px;
+  }
+
+  /* Category cards */
+  .cats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .cat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .cat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .cat-swatch {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .cat-info { flex: 1; min-width: 0; }
+  .cat-info-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .cat-info-count {
+    font-size: 11px;
+    color: var(--text3);
+    margin-top: 2px;
+  }
+
+  .btn-start {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: var(--text);
+    color: var(--bg);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.1s, box-shadow 0.1s, background 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .btn-start:hover {
+    background: #2d2420;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  .btn-start:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
+
+  .portada-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.5px;
+  }
+
+  /* ===================== JUEGO ===================== */
+  #screen-juego { display: none; min-height: 100vh; padding: 24px 20px 40px; }
+
+  .game-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .prog-label { font-size: 11px; color: var(--text3); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; }
+  .prog-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1;
+  }
+  .prog-total { font-size: 16px; color: var(--text3); font-weight: 400; }
+
+  .score-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  .score-label { font-size: 10px; color: var(--text3); letter-spacing: 1px; text-transform: uppercase; }
+  .score-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  /* Trivial pie de categorías — mini indicador */
+  .cat-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .cat-wedge {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .cat-indicator-name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* Progress bar */
+  .prog-bar-wrap {
+    background: var(--bg2);
+    border-radius: 4px;
+    height: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .prog-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1), background 0.4s;
+  }
+
+  /* Question card */
+  .question-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-md);
+    animation: cardIn 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(17px, 3.5vw, 21px);
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  /* Options */
+  .options-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 16px;
+  }
+
+  .option-btn {
+    background: var(--surface);
+    border: 1.5px solid var(--border-med);
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s, transform 0.1s, box-shadow 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.4;
+    box-shadow: var(--shadow-sm);
+  }
+  .option-btn:hover:not(:disabled) {
+    border-color: var(--text);
+    background: var(--surface2);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .opt-letter {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    color: var(--text2);
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .option-btn.correcto {
+    border-color: #27AE60;
+    background: rgba(39,174,96,0.07);
+  }
+  .option-btn.correcto .opt-letter {
+    background: #27AE60;
+    color: white;
+  }
+
+  .option-btn.incorrecto {
+    border-color: var(--activismo);
+    background: rgba(192,57,43,0.05);
+    opacity: 0.7;
+  }
+  .option-btn.incorrecto .opt-letter {
+    background: var(--activismo);
+    color: white;
+  }
+
+  .option-btn:disabled { cursor: default; }
+
+  /* Feedback */
+  .feedback-card {
+    display: none;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border-left: 4px solid;
+    animation: cardIn 0.25s ease;
+  }
+  .feedback-card.show { display: block; }
+  .feedback-card.ok {
+    background: rgba(39,174,96,0.08);
+    border-color: #27AE60;
+  }
+  .feedback-card.fail {
+    background: rgba(192,57,43,0.07);
+    border-color: var(--activismo);
+  }
+
+  .feedback-result {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .feedback-card.ok .feedback-result { color: #1a7a40; }
+  .feedback-card.fail .feedback-result { color: var(--activismo); }
+
+  .feedback-curiosidad {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .btn-next {
+    display: none;
+    width: 100%;
+    padding: 16px;
+    background: var(--text);
+    color: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.1s, background 0.2s, box-shadow 0.1s;
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.3px;
+  }
+  .btn-next.show { display: block; }
+  .btn-next:hover { background: #2d2420; transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+
+  /* ===================== RESULTADO ===================== */
+  #screen-resultado { display: none; min-height: 100vh; padding: 40px 20px; }
+
+  .result-pie-wrap {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .result-score-area {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .result-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 7vw, 48px);
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .result-score-wrap {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px 32px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 16px;
+  }
+
+  .result-score-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .result-score-den {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text3);
+  }
+
+  .result-msg {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.7;
+    max-width: 440px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  /* Breakdown */
+  .breakdown-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .breakdown-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 20px;
+  }
+
+  .breakdown-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .breakdown-row:last-child { margin-bottom: 0; }
+
+  .bd-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .bd-cat {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text2);
+    width: 130px;
+    flex-shrink: 0;
+  }
+
+  .bd-bar-wrap {
+    flex: 1;
+    background: var(--bg2);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .bd-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.9s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .bd-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .btn-replay {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    color: var(--text);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    border: 2px solid var(--border-med);
+    cursor: pointer;
+    border-radius: 12px;
+    transition: border-color 0.2s, background 0.2s, transform 0.1s;
+  }
+  .btn-replay:hover {
+    border-color: var(--text);
+    background: var(--surface);
+    transform: translateY(-1px);
+  }
+
+  .result-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 400px) {
+    .cats-grid { grid-template-columns: 1fr; }
+    .bd-cat { width: 100px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Pie deco corners -->
+<svg class="pie-deco tl" width="160" height="160" viewBox="0 0 160 160">
+  <path d="M0,0 L160,0 A160,160 0 0,1 0,160 Z" fill="rgba(232,160,32,0.12)"/>
+  <path d="M0,0 L120,0 A120,120 0 0,1 0,120 Z" fill="rgba(192,57,43,0.08)"/>
+  <path d="M0,0 L80,0 A80,80 0 0,1 0,80 Z" fill="rgba(142,68,173,0.07)"/>
+  <path d="M0,0 L40,0 A40,40 0 0,1 0,40 Z" fill="rgba(33,150,160,0.09)"/>
+</svg>
+<svg class="pie-deco br" width="160" height="160" viewBox="0 0 160 160">
+  <path d="M0,0 L160,0 A160,160 0 0,1 0,160 Z" fill="rgba(33,150,160,0.10)"/>
+  <path d="M0,0 L120,0 A120,120 0 0,1 0,120 Z" fill="rgba(142,68,173,0.07)"/>
+  <path d="M0,0 L80,0 A80,80 0 0,1 0,80 Z" fill="rgba(192,57,43,0.06)"/>
+  <path d="M0,0 L40,0 A40,40 0 0,1 0,40 Z" fill="rgba(232,160,32,0.09)"/>
+</svg>
+
+<div class="metro-strip"></div>
+
+<!-- =================== PORTADA =================== -->
+<div id="screen-portada">
+  <div class="portada-inner">
+
+    <!-- Pie trivial animado -->
+    <svg class="trivial-pie" width="100" height="100" viewBox="0 0 100 100">
+      <!-- Base circle -->
+      <circle cx="50" cy="50" r="46" fill="white" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+      <!-- 4 sectors -->
+      <!-- patrimonio: top-right -->
+      <path d="M50,50 L50,4 A46,46 0 0,1 96,50 Z" fill="#E8A020"/>
+      <!-- activismo: bottom-right -->
+      <path d="M50,50 L96,50 A46,46 0 0,1 50,96 Z" fill="#C0392B"/>
+      <!-- feminismo: bottom-left -->
+      <path d="M50,50 L50,96 A46,46 0 0,1 4,50 Z" fill="#8E44AD"/>
+      <!-- arte: top-left -->
+      <path d="M50,50 L4,50 A46,46 0 0,1 50,4 Z" fill="#2196A0"/>
+      <!-- center circle -->
+      <circle cx="50" cy="50" r="14" fill="white" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+      <!-- dividers -->
+      <line x1="50" y1="4" x2="50" y2="96" stroke="white" stroke-width="2"/>
+      <line x1="4" y1="50" x2="96" y2="50" stroke="white" stroke-width="2"/>
+    </svg>
+
+    <div class="title-main">TETUÁN</div>
+    <div class="title-sub">El Trivial del Barrio</div>
+
+    <div class="title-divider"><span>✦</span></div>
+
+    <div class="cats-grid" id="cats-grid"></div>
+
+    <button class="btn-start" onclick="iniciarJuego()">Empezar a jugar →</button>
+
+    <p class="portada-footer">15 preguntas por partida · selección aleatoria cada vez</p>
+
+  </div>
+</div>
+
+<!-- =================== JUEGO =================== -->
+<div id="screen-juego">
+  <div class="container">
+    <div class="game-topbar">
+      <div>
+        <div class="prog-label">Pregunta</div>
+        <div class="prog-num" id="prog-num">1<span class="prog-total">/15</span></div>
+      </div>
+      <div class="score-box">
+        <div class="score-label">Puntos</div>
+        <div class="score-val" id="score-val" style="color: var(--patrimonio)">0</div>
+      </div>
+    </div>
+
+    <div class="prog-bar-wrap">
+      <div class="prog-bar-fill" id="prog-bar" style="width:0%"></div>
+    </div>
+
+    <div class="cat-indicator" id="cat-indicator">
+      <div class="cat-wedge" id="cat-wedge"></div>
+      <span class="cat-indicator-name" id="cat-indicator-name"></span>
+    </div>
+
+    <div class="question-card" id="question-card">
+      <div class="question-text" id="question-text"></div>
+    </div>
+
+    <div class="options-wrap" id="options-wrap"></div>
+
+    <div class="feedback-card" id="feedback-card">
+      <div class="feedback-result" id="feedback-result"></div>
+      <div class="feedback-curiosidad" id="feedback-curiosidad"></div>
+    </div>
+
+    <button class="btn-next" id="btn-next" onclick="siguientePregunta()">Siguiente pregunta →</button>
+  </div>
+</div>
+
+<!-- =================== RESULTADO =================== -->
+<div id="screen-resultado">
+  <div class="container">
+
+    <div class="result-pie-wrap" id="result-pie-wrap">
+      <!-- pie se genera con JS según resultado -->
+    </div>
+
+    <div class="result-score-area">
+      <div class="result-title" id="result-title"></div>
+      <div class="result-score-wrap">
+        <div class="result-score-num" id="result-score-num" style="color: var(--patrimonio)">0</div>
+        <div class="result-score-den">/15</div>
+      </div>
+      <div class="result-msg" id="result-msg"></div>
+    </div>
+
+    <div class="breakdown-card">
+      <div class="breakdown-title">Resultados por categoría</div>
+      <div id="breakdown-rows"></div>
+    </div>
+
+    <button class="btn-replay" onclick="reiniciar()">↺ Jugar otra partida</button>
+
+    <div class="result-footer">✦ Rocío Dúrcal nació en Tetuán ✦</div>
+
+  </div>
+</div>
+
+<script>
+// ===== ESTADO =====
+let todasPreguntas = [];
+let preguntasPartida = [];
+let categorias = {};
+let indiceActual = 0;
+let puntuacion = 0;
+let respuestas = [];
+
+const CAT_COLORS = {
+  patrimonio: '#E8A020',
+  activismo:  '#C0392B',
+  feminismo:  '#8E44AD',
+  arte_urbano:'#2196A0'
+};
+
+// ===== CARGAR JSON =====
+async function cargarPreguntas() {
+  try {
+    const res = await fetch('preguntas.json');
+    const data = await res.json();
+    todasPreguntas = data.preguntas;
+    categorias = data.categorias;
+    poblarPortada();
+  } catch(e) {
+    console.error('Error cargando preguntas.json:', e);
+  }
+}
+
+function poblarPortada() {
+  const grid = document.getElementById('cats-grid');
+  grid.innerHTML = Object.entries(categorias).map(([key, cat]) => {
+    const count = todasPreguntas.filter(p => p.categoria === key).length;
+    return `
+      <div class="cat-card">
+        <div class="cat-swatch" style="background:${CAT_COLORS[key]}22;">${cat.emoji}</div>
+        <div class="cat-info">
+          <div class="cat-info-name">${cat.nombre}</div>
+          <div class="cat-info-count">${count} preguntas</div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// ===== MEZCLAR =====
+function mezclar(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function seleccionarPreguntas() {
+  const cats = Object.keys(CAT_COLORS);
+  let seleccion = [];
+  const porCat = {};
+  cats.forEach(cat => {
+    porCat[cat] = mezclar(todasPreguntas.filter(p => p.categoria === cat));
+  });
+  // mínimo 3 de cada categoría
+  cats.forEach(cat => {
+    seleccion.push(...porCat[cat].slice(0, 3));
+    porCat[cat] = porCat[cat].slice(3);
+  });
+  // rellenar hasta 15
+  const restantes = mezclar(cats.flatMap(cat => porCat[cat]));
+  seleccion.push(...restantes.slice(0, 3));
+  return mezclar(seleccion).slice(0, 15);
+}
+
+// ===== INICIAR =====
+function iniciarJuego() {
+  preguntasPartida = seleccionarPreguntas();
+  indiceActual = 0;
+  puntuacion = 0;
+  respuestas = [];
+  document.getElementById('screen-portada').style.display = 'none';
+  document.getElementById('screen-resultado').style.display = 'none';
+  document.getElementById('screen-juego').style.display = 'block';
+  mostrarPregunta();
+  window.scrollTo(0, 0);
+}
+
+// ===== MOSTRAR PREGUNTA =====
+function mostrarPregunta() {
+  const p = preguntasPartida[indiceActual];
+  const total = preguntasPartida.length;
+  const color = CAT_COLORS[p.categoria];
+  const cat = categorias[p.categoria];
+  const letras = ['A', 'B', 'C', 'D'];
+
+  // topbar
+  document.getElementById('prog-num').innerHTML =
+    `${indiceActual + 1}<span class="prog-total">/${total}</span>`;
+  document.getElementById('score-val').textContent = puntuacion;
+  document.getElementById('score-val').style.color = color;
+
+  // progress bar
+  const pct = (indiceActual / total) * 100;
+  const bar = document.getElementById('prog-bar');
+  bar.style.width = pct + '%';
+  bar.style.background = color;
+
+  // category indicator
+  document.getElementById('cat-wedge').style.background = color;
+  document.getElementById('cat-indicator-name').textContent = cat.emoji + ' ' + cat.nombre;
+  document.getElementById('cat-indicator-name').style.color = color;
+
+  // question
+  document.getElementById('question-text').textContent = p.pregunta;
+
+  // restart card animation
+  const card = document.getElementById('question-card');
+  card.style.animation = 'none';
+  void card.offsetWidth;
+  card.style.animation = '';
+
+  // options — mezclar opciones
+  const correctaTexto = p.opciones[p.correcta];
+  const idxMezclados = mezclar([...Array(p.opciones.length).keys()]);
+
+  const wrap = document.getElementById('options-wrap');
+  wrap.innerHTML = '';
+  idxMezclados.forEach((idx, pos) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.dataset.esCorrecta = (p.opciones[idx] === correctaTexto) ? '1' : '0';
+    btn.innerHTML = `<span class="opt-letter">${letras[pos]}</span>${p.opciones[idx]}`;
+    btn.onclick = () => responder(btn, p, color);
+    wrap.appendChild(btn);
+  });
+
+  // reset feedback y botón
+  const fb = document.getElementById('feedback-card');
+  fb.className = 'feedback-card';
+  const btnN = document.getElementById('btn-next');
+  btnN.className = 'btn-next';
+}
+
+// ===== RESPONDER =====
+function responder(btn, p, color) {
+  document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+
+  const esCorrecta = btn.dataset.esCorrecta === '1';
+  const fb = document.getElementById('feedback-card');
+
+  if (esCorrecta) {
+    btn.classList.add('correcto');
+    puntuacion++;
+    fb.className = 'feedback-card show ok';
+    document.getElementById('feedback-result').textContent = '✓ ¡Correcto!';
+    respuestas.push({ categoria: p.categoria, correcta: true });
+  } else {
+    btn.classList.add('incorrecto');
+    fb.className = 'feedback-card show fail';
+    document.getElementById('feedback-result').textContent = '✗ Incorrecto';
+    respuestas.push({ categoria: p.categoria, correcta: false });
+    // mostrar la correcta
+    document.querySelectorAll('.option-btn').forEach(b => {
+      if (b.dataset.esCorrecta === '1') b.classList.add('correcto');
+    });
+  }
+
+  document.getElementById('feedback-curiosidad').textContent = p.curiosidad || '';
+  document.getElementById('score-val').textContent = puntuacion;
+  document.getElementById('btn-next').className = 'btn-next show';
+}
+
+// ===== SIGUIENTE =====
+function siguientePregunta() {
+  indiceActual++;
+  if (indiceActual >= preguntasPartida.length) {
+    mostrarResultado();
+  } else {
+    mostrarPregunta();
+    window.scrollTo(0, 0);
+  }
+}
+
+// ===== RESULTADO =====
+function mostrarResultado() {
+  document.getElementById('screen-juego').style.display = 'none';
+  document.getElementById('screen-resultado').style.display = 'block';
+  window.scrollTo(0, 0);
+
+  const total = preguntasPartida.length;
+  const pct = Math.round((puntuacion / total) * 100);
+
+  // Pie resultado — sectores coloreados según acierto
+  const cats = Object.keys(CAT_COLORS);
+  const catStats = {};
+  cats.forEach(c => {
+    const rs = respuestas.filter(r => r.categoria === c);
+    catStats[c] = { total: rs.length, correctas: rs.filter(r => r.correcta).length };
+  });
+
+  // Pie SVG dinámico
+  const pieWrap = document.getElementById('result-pie-wrap');
+  pieWrap.innerHTML = generarPieSVG(catStats);
+
+  // título y mensaje
+  let titulo, msg, scoreColor;
+  if (pct >= 80) {
+    titulo = '¡Crack del barrio!';
+    msg = 'Conoces Tetuán como la palma de tu mano. Eres de los que sabe por qué hay una torreta en mitad de la acera y no le sorprende nada.';
+    scoreColor = CAT_COLORS.arte_urbano;
+  } else if (pct >= 60) {
+    titulo = 'Buena vecina';
+    msg = 'Conoces el barrio y sus historias. Con un poco más de exploración podrías ser una leyenda de Tetuán.';
+    scoreColor = CAT_COLORS.patrimonio;
+  } else if (pct >= 40) {
+    titulo = 'De paso...';
+    msg = 'Vas conociendo el barrio. Aún hay mucho que descubrir: historia, arte, lucha y vida en cada calle.';
+    scoreColor = '#888';
+  } else {
+    titulo = '¿Primera vez?';
+    msg = 'Tetuán tiene mucho que contarte. Pásate por el Mercado de Maravillas y empieza de nuevo.';
+    scoreColor = CAT_COLORS.activismo;
+  }
+
+  document.getElementById('result-title').textContent = titulo;
+  document.getElementById('result-score-num').textContent = puntuacion;
+  document.getElementById('result-score-num').style.color = scoreColor;
+  document.getElementById('result-msg').textContent = msg;
+
+  // breakdown
+  const rows = document.getElementById('breakdown-rows');
+  rows.innerHTML = '';
+  cats.forEach(cat => {
+    const st = catStats[cat];
+    if (!st || st.total === 0) return;
+    const catInfo = categorias[cat];
+    const color = CAT_COLORS[cat];
+    const pctCat = Math.round((st.correctas / st.total) * 100);
+    const row = document.createElement('div');
+    row.className = 'breakdown-row';
+    row.innerHTML = `
+      <div class="bd-dot" style="background:${color}"></div>
+      <div class="bd-cat">${catInfo.emoji} ${catInfo.nombre}</div>
+      <div class="bd-bar-wrap">
+        <div class="bd-bar" style="width:0%;background:${color}" data-pct="${pctCat}"></div>
+      </div>
+      <div class="bd-num" style="color:${color}">${st.correctas}/${st.total}</div>
+    `;
+    rows.appendChild(row);
+  });
+
+  setTimeout(() => {
+    document.querySelectorAll('.bd-bar').forEach(b => {
+      b.style.width = b.dataset.pct + '%';
+    });
+  }, 200);
+}
+
+function generarPieSVG(catStats) {
+  // Pie con opacidad según % de acierto por categoría
+  const cats = [
+    { key: 'patrimonio', angle: 0 },
+    { key: 'activismo',  angle: 90 },
+    { key: 'feminismo',  angle: 180 },
+    { key: 'arte_urbano',angle: 270 }
+  ];
+
+  const sectors = cats.map(({key, angle}) => {
+    const st = catStats[key] || { total: 1, correctas: 0 };
+    const pct = st.correctas / (st.total || 1);
+    const color = CAT_COLORS[key];
+    const r = 46;
+    const cx = 50, cy = 50;
+    const startRad = (angle - 90) * Math.PI / 180;
+    const endRad = (angle - 90 + 89) * Math.PI / 180;
+    const x1 = cx + r * Math.cos(startRad);
+    const y1 = cy + r * Math.sin(startRad);
+    const x2 = cx + r * Math.cos(endRad);
+    const y2 = cy + r * Math.sin(endRad);
+    const opacity = 0.25 + pct * 0.75;
+    return `<path d="M${cx},${cy} L${x1.toFixed(2)},${y1.toFixed(2)} A${r},${r} 0 0,1 ${x2.toFixed(2)},${y2.toFixed(2)} Z" fill="${color}" opacity="${opacity.toFixed(2)}"/>`;
+  }).join('');
+
+  return `
+    <svg width="110" height="110" viewBox="0 0 100 100" style="filter:drop-shadow(0 4px 12px rgba(0,0,0,0.15));display:block;margin:0 auto 20px;">
+      <circle cx="50" cy="50" r="46" fill="white" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+      ${sectors}
+      <circle cx="50" cy="50" r="14" fill="white" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+      <line x1="50" y1="4" x2="50" y2="96" stroke="white" stroke-width="2"/>
+      <line x1="4" y1="50" x2="96" y2="50" stroke="white" stroke-width="2"/>
+    </svg>`;
+}
+
+// ===== REINICIAR =====
+function reiniciar() {
+  document.getElementById('screen-resultado').style.display = 'none';
+  document.getElementById('screen-portada').style.display = 'flex';
+  window.scrollTo(0, 0);
+}
+
+cargarPreguntas();
+</script>
+</body>
+</html>
