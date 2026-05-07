@@ -18,75 +18,99 @@
     "arte_urbano": {
       "nombre": "Arte Urbano",
       "emoji": "🎨",
-      "color": "#27AE60"
+      "color": "#2196A0"
     }
   },
   "preguntas": [
     {
       "id": 1,
       "categoria": "patrimonio",
-      "pregunta": "¿Qué es el Plan Bidagor?",
-      "opciones": [
-        "Un sistema de planificación urbana basado en el principio \"Bi-Da-Gor\": Bifurcar, Dar forma y Gobernar la ciudad desde el aire",
-        "Un proyecto para construir un paseo marítimo en Bravo Murillo con playa artificial y chiringuitos",
-        "Un plan urbanístico de posguerra que dividió Tetuán en zonas más favorecidas para las élites del régimen y la zona pobre y popular"
-      ],
-      "correcta": 2,
-      "curiosidad": "El Plan Bidagor (1941) fue el primer plan de ordenación urbana de Madrid en la posguerra, y marcó una división social muy clara en el barrio de Tetuán."
+      "pregunta": "Tetuán es un distrito de Madrid con 6 barrios: Cuatro Caminos, Castillejos, Berruguete, Bellas Vistas, Almenara… De la siguiente lista señala el barrio de Tetuán que falta:",
+      "opciones": ["Malasaña", "Valdeacederas", "Chueca", "Chamberí"],
+      "correcta": 1
     },
     {
       "id": 2,
       "categoria": "patrimonio",
-      "pregunta": "¿Por qué el Plan Bidagor se llamaba \"Bidagor\"?",
+      "pregunta": "¿Por qué el distrito madrileño de Tetuán se llama así?",
       "opciones": [
-        "Porque era un acrónimo técnico que significaba \"Bifurcación, Dirección y Ordenación General de la Región\"",
-        "Porque lo apodaron \"vida-gorda\": una forma de decir que habría una zona con \"vida de ricos\"",
-        "Por el apellido de su principal impulsor, Pedro Bidagor, arquitecto y urbanista del régimen"
+        "Porque allí había muchas fuentes y manantiales",
+        "Porque era el apellido de un poeta del barrio",
+        "Porque el nombre fue elegido al azar",
+        "Porque el barrio nació alrededor del campamento de las tropas que regresaban de la conquista de Tetuán, en Marruecos, convertida entonces en propaganda patriótica y colonial"
       ],
-      "correcta": 2,
-      "curiosidad": "Pedro Bidagor Lasarte fue el arquitecto jefe del Plan General de Ordenación Urbana de Madrid de 1941, vinculado al régimen franquista."
+      "correcta": 3
     },
     {
       "id": 3,
       "categoria": "patrimonio",
-      "pregunta": "¿En qué línea de metro de Madrid se encuentra la parada de Tetuán?",
+      "pregunta": "¿De qué pueblos formaba parte el área que hoy ocupa el distrito de Tetuán?",
       "opciones": [
-        "Línea 1",
-        "Línea 6",
-        "Línea 8",
-        "Línea 4"
+        "Fuencarral y el Pardo",
+        "Moncloa y Aravaca",
+        "Chamartín de la Rosa y Fuencarral",
+        "Paseo de la Castellana y Chamartín"
       ],
-      "correcta": 0,
-      "curiosidad": "La línea 1 es la más antigua del metro de Madrid, inaugurada en 1919. Su color característico es el azul oscuro."
+      "correcta": 2
     },
     {
       "id": 4,
       "categoria": "patrimonio",
-      "pregunta": "¿Qué estilo arquitectónico caracteriza muchos de los edificios de viviendas obreras de Tetuán de principios del siglo XX?",
+      "pregunta": "¿En qué calles de Tetuán hay una alcantarilla de 1936?",
       "opciones": [
-        "Modernismo catalán",
-        "Neomudéjar popular",
-        "Art Déco",
-        "Racionalismo"
+        "Calle Araucaria",
+        "Travesía de Bellver",
+        "Ninguna",
+        "Las 2 mencionadas"
       ],
-      "correcta": 1,
-      "curiosidad": "El neomudéjar popular se caracteriza por el uso del ladrillo visto con decoraciones de inspiración árabe, muy común en la arquitectura humilde madrileña."
+      "correcta": 3
     },
     {
       "id": 5,
       "categoria": "patrimonio",
-      "pregunta": "¿Cuándo comenzó el barrio de Tetuán a integrarse oficialmente como parte del municipio de Madrid?",
+      "pregunta": "¿Qué es el Plan Bidagor?",
       "opciones": [
-        "1860",
-        "1948",
-        "1923",
-        "1900"
+        "Un sistema de planificación urbana basado en el principio \"Bi-Da-Gor\": Bifurcar, Dar forma y Gobernar la ciudad desde el aire",
+        "Un proyecto para construir un paseo marítimo en Bravo Murillo con playa artificial y chiringuitos",
+        "Un plan urbanístico de posguerra que dividió Tetuán en una zona más favorecida para las élites del régimen y la zona pobre y popular",
+        "Un proyecto de jardinería urbana para convertir solares en huertos comunitarios en los años 40"
       ],
-      "correcta": 1,
-      "curiosidad": "Tetuán fue un municipio independiente durante mucho tiempo antes de ser anexionado definitivamente a Madrid en 1948."
+      "correcta": 2
     },
     {
       "id": 6,
+      "categoria": "patrimonio",
+      "pregunta": "¿Por qué el Plan Bidagor se llamaba \"Bidagor\"?",
+      "opciones": [
+        "Porque era un acrónimo técnico que significaba \"Bifurcación, Dirección y Ordenación General de la Región\"",
+        "Porque lo apodaron \"vida-gorda\": una forma de decir que era una zona con \"vida de ricos\"",
+        "Por el apellido de su principal impulsor, Pedro Bidagor, arquitecto y urbanista del régimen"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 7,
+      "categoria": "patrimonio",
+      "pregunta": "¿En qué línea de metro de Madrid se encuentra la parada de Tetuán?",
+      "opciones": ["Línea 1", "Línea 6", "Línea 8", "Línea 4"],
+      "correcta": 0
+    },
+    {
+      "id": 8,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué estilo arquitectónico caracteriza muchos de los edificios de viviendas obreras de Tetuán de principios del siglo XX?",
+      "opciones": ["Modernismo catalán", "Neomudéjar popular", "Art Déco", "Racionalismo"],
+      "correcta": 1
+    },
+    {
+      "id": 9,
+      "categoria": "patrimonio",
+      "pregunta": "¿Cuándo comenzó el barrio de Tetuán a integrarse oficialmente como parte del municipio de Madrid?",
+      "opciones": ["1860", "1948", "1923", "1900"],
+      "correcta": 1
+    },
+    {
+      "id": 10,
       "categoria": "patrimonio",
       "pregunta": "¿Qué elemento urbano paradójico es muy característico de las aceras de Tetuán y símbolo de su peculiar urbanismo?",
       "opciones": [
@@ -95,24 +119,17 @@
         "Semáforos dobles",
         "Buzones pintados"
       ],
-      "correcta": 1,
-      "curiosidad": "Las torretas eléctricas en plena acera son un vestigio de cuando el barrio se urbanizó de forma desordenada, y siguen siendo un obstáculo cotidiano para los vecinos."
+      "correcta": 1
     },
     {
-      "id": 7,
+      "id": 11,
       "categoria": "patrimonio",
       "pregunta": "¿De qué zona geográfica procede la mayoría de la primera oleada de migrantes que pobló Tetuán en el siglo XX?",
-      "opciones": [
-        "Galicia y Asturias",
-        "Andalucía y Murcia",
-        "Extremadura y Castilla",
-        "País Vasco y Navarra"
-      ],
-      "correcta": 1,
-      "curiosidad": "Tetuán fue destino de miles de migrantes del sur que buscaban trabajo en la capital, dándole al barrio su carácter popular y diverso."
+      "opciones": ["Galicia y Asturias", "Andalucía y Murcia", "Extremadura y Castilla", "País Vasco y Navarra"],
+      "correcta": 1
     },
     {
-      "id": 8,
+      "id": 12,
       "categoria": "patrimonio",
       "pregunta": "¿Qué mercado tradicional es un punto de referencia histórico y comercial del barrio de Tetuán?",
       "opciones": [
@@ -121,11 +138,10 @@
         "Mercado de Antón Martín",
         "Mercado de La Paz"
       ],
-      "correcta": 0,
-      "curiosidad": "El Mercado de Maravillas es uno de los mercados más grandes de Madrid y sigue siendo el corazón comercial de Tetuán."
+      "correcta": 0
     },
     {
-      "id": 9,
+      "id": 13,
       "categoria": "patrimonio",
       "pregunta": "¿Cómo se llama realmente la plaza de las Palomas?",
       "opciones": [
@@ -134,24 +150,258 @@
         "Plaza del Canal de Isabel II",
         "Plaza de la Remonta"
       ],
-      "correcta": 2,
-      "curiosidad": "La famosa «plaza de las Palomas» debe su nombre popular a sus habitantes alados, pero oficialmente es la Plaza del Canal de Isabel II."
+      "correcta": 2
     },
     {
-      "id": 10,
+      "id": 14,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué material era típico en muchas casas populares históricas de Tetuán?",
+      "opciones": ["Granito", "Hormigón armado", "Ladrillo visto", "Mármol blanco"],
+      "correcta": 2
+    },
+    {
+      "id": 15,
+      "categoria": "patrimonio",
+      "pregunta": "¿Por qué muchas calles de Tetuán son estrechas e irregulares?",
+      "opciones": [
+        "Por un bombardeo",
+        "Porque crecieron sin planificación urbanística formal",
+        "Por influencia mudéjar",
+        "Por el tranvía"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 16,
+      "categoria": "patrimonio",
+      "pregunta": "Antes de ser parte de Madrid, ¿qué era Tetuán?",
+      "opciones": [
+        "Tetuán fue siempre parte de Madrid",
+        "Un arrabal del pueblo de Chamartín de la Rosa",
+        "Un barrio de Cuatro Caminos",
+        "El extremo norte del pueblo de Chamberí"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 17,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué construcción histórica sigue muy presente en el paisaje de Tetuán?",
+      "opciones": [
+        "La fábrica Mahou",
+        "El Canal de Isabel II",
+        "La estación del Norte",
+        "Matadero Madrid"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 18,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué calle de Tetuán está dedicada a un pionero de la aviación?",
+      "opciones": ["Ofelia Nieto", "Raimundo Fernández Villaverde", "Marqués de Viana", "Lope de Haro"],
+      "correcta": 2
+    },
+    {
+      "id": 19,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué político fue presidente del Gobierno y da nombre a una calle de Tetuán?",
+      "opciones": ["Sagasta", "Canalejas", "Raimundo Fernández Villaverde", "Azaña"],
+      "correcta": 2
+    },
+    {
+      "id": 20,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué perfil político predominaba en Raimundo Fernández Villaverde?",
+      "opciones": ["Republicano federal", "Anarquista", "Conservador", "Carlista"],
+      "correcta": 2
+    },
+    {
+      "id": 21,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué político liberal da nombre a una calle de Tetuán y fue alcalde de Madrid?",
+      "opciones": ["Francisco Franco", "Cánovas del Castillo", "Francos Rodríguez", "Mendizábal"],
+      "correcta": 2
+    },
+    {
+      "id": 22,
+      "categoria": "patrimonio",
+      "pregunta": "Tiene una calle en Tetuán. ¿Quién fue Blanco Argibay?",
+      "opciones": [
+        "Un arquitecto del Canal de Isabel II",
+        "Un sindicalista republicano",
+        "Un militar del bando golpista muerto en la Guerra Civil",
+        "Un poeta del 27"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 23,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué debate existe en torno a la calle Capitán Blanco Argibay?",
+      "opciones": [
+        "Su peatonalización",
+        "Su ampliación",
+        "Su cambio de nombre por razones de memoria histórica",
+        "Su desaparición por obras del metro"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 24,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué medio hiperlocal de los siguientes ya no se actualiza?",
+      "opciones": ["Aquí Tetuán", "Somos Tetuán", "Radio Almenara", "Tetuán 30 Días"],
+      "correcta": 0
+    },
+    {
+      "id": 25,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué papel tuvo Bravo Murillo, político que da nombre a la principal calle de Tetuán, en la ciudad de Madrid?",
+      "opciones": [
+        "Impulsó la construcción del Canal de Isabel II",
+        "Fue alcalde de Madrid durante la República",
+        "Diseñó el barrio de Tetuán",
+        "Dirigió la desamortización de los consumos"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 26,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué eran los \"consumos\" que influyeron en el crecimiento histórico de Tetuán?",
+      "opciones": [
+        "Un sistema de ayudas para familias obreras",
+        "Un mercado de intercambio vecinal",
+        "Un sistema de impuestos y aduanas municipales sobre productos que entraban en Madrid",
+        "Tarifas para usar el tranvía"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 27,
+      "categoria": "patrimonio",
+      "pregunta": "¿Por qué muchas personas se instalaron históricamente en los arrabales de Tetuán fuera del límite de Madrid?",
+      "opciones": [
+        "Para estar cerca del río",
+        "Por la presencia de fábricas textiles",
+        "Para evitar pagar los \"consumos\", impuestos sobre mercancías y alimentos",
+        "Porque allí estaba la universidad"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 28,
+      "categoria": "patrimonio",
+      "pregunta": "¿Cuál de estas situaciones reflejaba algunas de las dificultades de la vida en el antiguo Tetuán?",
+      "opciones": [
+        "No había acceso a agua corriente en muchas viviendas",
+        "Faltaba suministro eléctrico en gran parte del barrio",
+        "Había que pagar los \"consumos\", impuestos para entrar mercancías en Madrid",
+        "Todas las anteriores son correctas"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 29,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué caracteriza al neomudéjar popular presente en muchas viviendas de Tetuán a principios del siglo XX?",
+      "opciones": [
+        "Un estilo arquitectónico oficial diseñado por arquitectos de la élite",
+        "Construcciones industriales vinculadas al Canal de Isabel II",
+        "Un estilo importado directamente de Andalucía por encargo municipal",
+        "Un estilo construido por la propia gente, a menudo sin planificación ni permisos formales"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 30,
+      "categoria": "patrimonio",
+      "pregunta": "Antes de convertirse en un barrio densamente urbanizado, Tetuán llegó a tener…",
+      "opciones": [
+        "Un aeropuerto",
+        "Un puerto fluvial",
+        "Una plaza de toros de estilo neomudéjar",
+        "Un circuito de carreras"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 31,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué ocurrió con la antigua plaza de toros de Tetuán durante la Guerra Civil?",
+      "opciones": [
+        "Se convirtió en hospital",
+        "Fue trasladada a Las Ventas",
+        "Se utilizó como polvorín y explotó en 1936",
+        "Se transformó en estación de metro"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 32,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué era el \"Canalillo\"?",
+      "opciones": [
+        "Un pequeño metro subterráneo",
+        "Un arroyo natural desaparecido",
+        "Un canal de agua vinculado al Canal de Isabel II que recorría parte de la Dehesa de la Villa y nuestro barrio",
+        "Un túnel de la Guerra Civil"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 33,
+      "categoria": "patrimonio",
+      "pregunta": "Durante la Guerra Civil, ¿qué papel tuvo Tetuán debido a su ubicación?",
+      "opciones": [
+        "Fue una zona turística neutral",
+        "Estuvo cerca del frente y sufrió bombardeos y militarización",
+        "Fue sede del gobierno republicano",
+        "No se vio afectado por la guerra"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 34,
+      "categoria": "patrimonio",
+      "pregunta": "¿Quién fue Cipriano Mera, personaje vinculado a Tetuán?",
+      "opciones": [
+        "Un torero famoso",
+        "Un arquitecto del Canal de Isabel II",
+        "Un albañil y dirigente anarcosindicalista durante la Guerra Civil",
+        "Un alcalde franquista"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 35,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué famoso cantante vivió parte de su infancia y juventud en Tetuán?",
+      "opciones": ["Julio Iglesias", "Joaquín Sabina", "Raphael", "Camilo Sesto"],
+      "correcta": 2
+    },
+    {
+      "id": 36,
+      "categoria": "patrimonio",
+      "pregunta": "¿Qué poeta, vecino de Tetuán y Premio Nacional de Poesía, da nombre a una plaza del barrio y tiene además una placa conmemorativa en una de las casas donde vivió?",
+      "opciones": ["Luis Rosales", "Vicente Aleixandre", "Ángel González", "Leopoldo de Luis"],
+      "correcta": 3
+    },
+    {
+      "id": 37,
       "categoria": "activismo",
       "pregunta": "¿Qué movimiento vecinal histórico de Tetuán fue pionero en la lucha por los derechos urbanos en Madrid durante los años 70?",
       "opciones": [
-        "Asociación de Vecinos de Tetuán",
+        "Asociación vecinal de Tetuán",
         "Plataforma Norte",
         "Coordinadora de Barrios",
         "Frente de Barrio"
       ],
-      "correcta": 0,
-      "curiosidad": "Las asociaciones vecinales de barrios como Tetuán jugaron un papel clave en la transición democrática española, exigiendo servicios básicos y participación ciudadana."
+      "correcta": 0
     },
     {
-      "id": 11,
+      "id": 38,
       "categoria": "activismo",
       "pregunta": "¿Qué problemática social ha protagonizado movilizaciones vecinales recientes en Tetuán?",
       "opciones": [
@@ -160,24 +410,17 @@
         "El cierre del mercado de Maravillas",
         "La supresión de líneas de autobús"
       ],
-      "correcta": 1,
-      "curiosidad": "Como en otros barrios populares de Madrid, los vecinos de Tetuán han organizado resistencia frente a la especulación inmobiliaria y las subidas de alquiler."
+      "correcta": 1
     },
     {
-      "id": 12,
+      "id": 39,
       "categoria": "activismo",
       "pregunta": "¿Qué espacio autogestionado de Tetuán ha sido históricamente un centro de cultura y activismo de base?",
-      "opciones": [
-        "La Tabacalera",
-        "El Patio Maravillas",
-        "El Eko",
-        "La Enredadera"
-      ],
-      "correcta": 3,
-      "curiosidad": "La Enredadera es un espacio comunitario autogestionado en Tetuán que ha acogido iniciativas vecinales, culturales y de activismo de base."
+      "opciones": ["La Tabacalera", "El Patio Maravillas", "El Eko", "La Enredadera"],
+      "correcta": 3
     },
     {
-      "id": 13,
+      "id": 40,
       "categoria": "activismo",
       "pregunta": "¿Qué lucha protagonizaron vecinas y vecinos de Tetuán en relación al espacio público durante los últimos años?",
       "opciones": [
@@ -186,37 +429,443 @@
         "Prohibir los patinetes eléctricos",
         "Eliminar el parking del Bernabéu"
       ],
-      "correcta": 0,
-      "curiosidad": "Los huertos comunitarios en solares vacíos han sido una forma de activismo urbano que reivindica el verde y la comunidad frente a la especulación."
+      "correcta": 0
     },
     {
-      "id": 14,
+      "id": 41,
+      "categoria": "activismo",
+      "pregunta": "¿Qué elemento se ha convertido casi en un \"meme vecinal\" sobre el urbanismo en Tetuán?",
+      "opciones": [
+        "Las farolas rosas",
+        "Las torretas eléctricas en mitad de las aceras",
+        "Las rotondas gigantes",
+        "Los pasos elevados"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 42,
+      "categoria": "activismo",
+      "pregunta": "Nuestro vecino Luis de la Cruz escribió un libro sobre este concepto. ¿Cuál de estas ideas encaja mejor con el barrionalismo?",
+      "opciones": [
+        "Competir entre barrios",
+        "Convertir los barrios en marcas turísticas",
+        "Defender la vida comunitaria y vecinal",
+        "Eliminar las asociaciones vecinales"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 43,
+      "categoria": "activismo",
+      "pregunta": "¿En qué calle se encuentra la Huerta de Tetuán?",
+      "opciones": ["Bravo Murillo", "Ofelia Nieto", "Calle Matadero", "Francos Rodríguez"],
+      "correcta": 2
+    },
+    {
+      "id": 44,
+      "categoria": "activismo",
+      "pregunta": "¿En qué año comenzó la Huerta de Tetuán?",
+      "opciones": ["2008", "2010", "2013", "2020"],
+      "correcta": 2
+    },
+    {
+      "id": 45,
+      "categoria": "activismo",
+      "pregunta": "¿Qué huerta del barrio toma su nombre de una calle dedicada a una soprano?",
+      "opciones": [
+        "Huerto Zuloaga",
+        "Huerta de Bellas Vistas",
+        "La Morera de Ofelia Nieto",
+        "La Regüerta"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 46,
+      "categoria": "activismo",
+      "pregunta": "¿Qué huerta urbana de Tetuán fue desalojada en 2022?",
+      "opciones": [
+        "La Regüerta",
+        "Huerta de Bellas Vistas",
+        "Huerto Zuloaga",
+        "La Huerta de Tiziano"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 47,
+      "categoria": "activismo",
+      "pregunta": "¿Qué huerta histórica de Tetuán estuvo activa entre 2012 y 2013 y dejó incluso un documental?",
+      "opciones": [
+        "Huerto Zuloaga",
+        "La Morera de Ofelia Nieto",
+        "La Regüerta",
+        "Huerta de Bellas Vistas"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 48,
+      "categoria": "activismo",
+      "pregunta": "¿Qué huerta de Tetuán está vinculada a una AFA y a un centro educativo?",
+      "opciones": [
+        "Huerta de Tetuán",
+        "Huerta de Bellas Vistas",
+        "Huerto Zuloaga",
+        "La Morera de Ofelia Nieto"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 49,
+      "categoria": "activismo",
+      "pregunta": "¿Qué barrio da nombre a una de las huertas urbanas activas de Tetuán?",
+      "opciones": ["Chamberí", "Lavapiés", "Bellas Vistas", "Prosperidad"],
+      "correcta": 2
+    },
+    {
+      "id": 50,
+      "categoria": "activismo",
+      "pregunta": "¿Qué ocurrió con el antiguo Huerto de la Ventilla en 2017?",
+      "opciones": [
+        "Se convirtió en parking",
+        "Fue demolido por completo",
+        "Fue trasladado",
+        "Se convirtió en piscina"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 51,
+      "categoria": "activismo",
+      "pregunta": "¿Qué huerta desaparecida de Tetuán es considerada una precursora de otros huertos posteriores?",
+      "opciones": [
+        "Huerta de Tiziano",
+        "Huerto de la Ventilla",
+        "La Regüerta",
+        "Huerto Zuloaga"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 52,
+      "categoria": "activismo",
+      "pregunta": "¿Qué conflicto urbanístico y vecinal dio lugar al símbolo \"Ofelia Nieto 29\"?",
+      "opciones": [
+        "La construcción de un centro comercial",
+        "La demolición de una vivienda y la lucha contra la especulación urbanística",
+        "El cierre de una radio libre",
+        "La desaparición de una huerta urbana"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 53,
+      "categoria": "activismo",
+      "pregunta": "¿Cuál fue la ganadora del certamen vecinal \"Miss Torreta Tetuán\"?",
+      "opciones": ["Miss Olite", "Miss Campo Real", "Miss Araucaria", "Miss Navarra"],
+      "correcta": 1
+    },
+    {
+      "id": 54,
+      "categoria": "activismo",
+      "pregunta": "¿Qué ocurrió con el Espacio Bellas Vistas en 2026?",
+      "opciones": [
+        "Se convirtió en un centro cultural municipal",
+        "Fue desalojado por obras del metro",
+        "Se trasladó a otro barrio por decisión vecinal",
+        "Debido a la presión de un fondo buitre, tuvo que abandonar su ubicación y buscar otro local para trasladarse"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 55,
+      "categoria": "activismo",
+      "pregunta": "¿Qué ocurrió con la morera centenaria, símbolo de la lucha vecinal contra la especulación del Paseo de la Dirección?",
+      "opciones": [
+        "Se convirtió en monumento protegido dentro de un parque histórico",
+        "Fue trasladada a otra ciudad para su conservación",
+        "Fue talada en el verano 2025",
+        "Se secó de forma natural"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": 56,
+      "categoria": "activismo",
+      "pregunta": "¿Cuántos cines llegó a tener el distrito de Tetuán y cuántos quedan actualmente en funcionamiento?",
+      "opciones": [
+        "3 cines y aún queda 1 abierto",
+        "10 cines y aún quedan 2 abiertos",
+        "1 cine histórico y sigue funcionando",
+        "Llegó a haber 39 cines (incluyendo cines de verano), 14 llegaron a funcionar a la vez en los años 60 y actualmente no queda ninguno"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 57,
+      "categoria": "activismo",
+      "pregunta": "¿Qué son esas baldosas doradas que pueden encontrarse en algunas calles de Tetuán?",
+      "opciones": [
+        "Monumentos dedicados a antiguos mercados del barrio",
+        "Señales del recorrido del Canalillo por Tetuán",
+        "Baldosas que marcan antiguos límites de barrios históricos",
+        "Son los \"Stolpersteine\" que recuerdan a personas víctimas del nazismo en su último domicilio conocido"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 58,
       "categoria": "feminismo",
       "pregunta": "¿Qué cantante nacida en el barrio de Tetuán de Madrid fue un icono de la canción española y latinoamericana?",
-      "opciones": [
-        "Lola Flores",
-        "Rocío Dúrcal",
-        "Concha Piquer",
-        "Isabel Pantoja"
-      ],
-      "correcta": 1,
-      "curiosidad": "Rocío Dúrcal nació en 1944 en el barrio de Tetuán de Madrid. Su nombre artístico viene de una aldea asturiana, pero sus raíces están en este barrio."
+      "opciones": ["Lola Flores", "Rocío Dúrcal", "Concha Piquer", "Isabel Pantoja"],
+      "correcta": 1
     },
     {
-      "id": 15,
+      "id": 59,
       "categoria": "feminismo",
       "pregunta": "¿Qué porcentaje aproximado de las calles de Madrid llevan nombre de mujer?",
-      "opciones": [
-        "Menos del 15%",
-        "Alrededor del 25%",
-        "Casi el 50%",
-        "Más del 60%"
-      ],
-      "correcta": 0,
-      "curiosidad": "En la mayoría de ciudades españolas, menos del 15% de las calles llevan nombre de mujer, reflejo de la invisibilización histórica femenina."
+      "opciones": ["Menos del 15%", "Alrededor del 25%", "Casi el 50%", "Más del 60%"],
+      "correcta": 0
     },
     {
-      "id": 16,
+      "id": 60,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué mujer autora del \"Diccionario de uso del español\" vivió en Tetuán?",
+      "opciones": ["Jerónima Llorente", "Matilde Landa", "María Moliner", "Ofelia Nieto"],
+      "correcta": 2
+    },
+    {
+      "id": 61,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué barrio de Tetuán tiene una calle dedicada a Matilde Landa?",
+      "opciones": ["Berruguete", "Valdeacederas", "Castillejos", "Almenara-Ventilla"],
+      "correcta": 3
+    },
+    {
+      "id": 62,
+      "categoria": "feminismo",
+      "pregunta": "Ofelia Nieto es el nombre de una calle de Tetuán. ¿Sabes cuál fue la profesión de esta mujer?",
+      "opciones": ["Cantante de ópera", "Bibliotecaria", "Escritora", "Propietaria"],
+      "correcta": 0
+    },
+    {
+      "id": 63,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué mujer que vivió en el barrio tiene una placa en el Parque del Oeste de Madrid y una pegatina en forma de placa en la casa de Tetuán en la que vivió?",
+      "opciones": [
+        "María Zayas",
+        "Cristina Ortiz, \"La Veneno\"",
+        "Jerónima Llorente",
+        "María Teresa González Quevedo"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 64,
+      "categoria": "feminismo",
+      "pregunta": "La pedagoga Josefa Amar da nombre en nuestro barrio a…",
+      "opciones": [
+        "Una calle de Tetuán",
+        "Un Centro Social Comunitario",
+        "Las dos cosas",
+        "Ninguna de ellas"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": 65,
+      "categoria": "feminismo",
+      "pregunta": "Una calle de Tetuán lleva el nombre de Rosario Pino. En la siguiente enumeración señala la única información que es falsa:",
+      "opciones": [
+        "Nació en Madrid y murió en Málaga",
+        "Estuvo nueve temporadas seguidas trabajando en el Teatro Lara con grandes nombres del teatro español como María Guerrero, Fernando Díaz de Mendoza…",
+        "Fue una de las figuras más destacadas del teatro español de finales del siglo XIX y principios del XX",
+        "Fue pionera en el uso femenino de la bicicleta, algo que resultaba revolucionario para su época"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 66,
+      "categoria": "feminismo",
+      "pregunta": "¿A qué mujer, que da nombre a una calle de Tetuán, le dedicó una canción el grupo de rock español Barricada?",
+      "opciones": ["Ofelia Nieto", "Matilde Landa", "María Zayas", "Jerónima Llorente"],
+      "correcta": 1
+    },
+    {
+      "id": 67,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué actriz española, de la primera mitad del siglo XX, tiene sus restos en el Panteón de Hombres Ilustres de la madrileña Sacramental de San Justo?",
+      "opciones": [
+        "Ofelia Nieto",
+        "María Teresa González Quevedo",
+        "Josefa Amar",
+        "Jerónima Llorente"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 68,
+      "categoria": "feminismo",
+      "pregunta": "¿A qué personajes femeninos de Galdós tiene dedicadas calles Tetuán?",
+      "opciones": [
+        "Marianela, Fortunata y Jacinta",
+        "Tristana y Saturna",
+        "Isidora Rufete y Encarnación Guillén",
+        "Doña Perfecta y Rosario"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 69,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué famosa filósofa tiene una biblioteca dedicada en Tetuán?",
+      "opciones": [
+        "María Zambrano",
+        "María Moliner",
+        "José Ortega y Gasset",
+        "Manuel Vázquez Montalbán"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 70,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué espacio hay dedicado en Tetuán a las hermanas Mirabal?",
+      "opciones": [
+        "Espacio de igualdad",
+        "Una calle",
+        "Un centro de salud",
+        "Una clínica para abortar"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 71,
+      "categoria": "feminismo",
+      "pregunta": "El 25 de noviembre es el Día contra la Violencia Machista y conmemora el asesinato de mujeres cuyas vidas se recuerdan en espacios dedicados en Tetuán. ¿A quiénes nos referimos?",
+      "opciones": [
+        "Hermanas Mirabal",
+        "Fortunata y Jacinta",
+        "La Veneno",
+        "Niñas de Alcàsser"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 72,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué famosa artista paseó \"su fina estampa\" por las calles de Tetuán?",
+      "opciones": [
+        "María Dolores de la Pradera",
+        "Rocío Dúrcal",
+        "Juana Francés",
+        "La Veneno"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 73,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué artista fue la única mujer del colectivo El Paso y tuvo su estudio en Tetuán?",
+      "opciones": ["Juana Francés", "Maruja Mallo", "Ángeles Santos", "María Blanchard"],
+      "correcta": 0
+    },
+    {
+      "id": 74,
+      "categoria": "feminismo",
+      "pregunta": "De las siguientes pintoras, ¿cuál tiene una placa y una sala de exposiciones dedicada en la Junta Municipal del Distrito de Tetuán?",
+      "opciones": ["Juana Francés", "Maruja Mallo", "Ángeles Santos", "María Blanchard"],
+      "correcta": 0
+    },
+    {
+      "id": 75,
+      "categoria": "feminismo",
+      "pregunta": "Cada 28 de diciembre, se produce un conflicto relacionado con los derechos de las mujeres en Tetuán. ¿A cuál nos referimos?",
+      "opciones": [
+        "Protestas a favor y contra el aborto en la clínica Dátor",
+        "La manifestación del Día de la Mujer",
+        "Concentración contra la violencia machista",
+        "La gala Miss Torreta Tetuán"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 76,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué feminista histórica vive en Tetuán?",
+      "opciones": ["Justa Montero", "Concepción Arenal", "Amelia Valcárcel", "Lidia Falcón"],
+      "correcta": 0
+    },
+    {
+      "id": 77,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué concepto de los siguientes tiene menos calles dedicadas en Tetuán?",
+      "opciones": ["Mujeres", "Hombres", "Lugares", "Plantas"],
+      "correcta": 0
+    },
+    {
+      "id": 78,
+      "categoria": "feminismo",
+      "pregunta": "¿De qué perfiles de mujeres hay más calles en Tetuán?",
+      "opciones": [
+        "Propietarias o herederas de los terrenos donde se hizo la calle",
+        "Santas y monjas",
+        "Realeza",
+        "Actrices"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 79,
+      "categoria": "feminismo",
+      "pregunta": "¿Desde qué año existe el colectivo Feminismos Tetuán?",
+      "opciones": ["2018", "1887", "1999", "2005"],
+      "correcta": 0
+    },
+    {
+      "id": 80,
+      "categoria": "feminismo",
+      "pregunta": "¿En qué calle se encuentra el CSOA La Enre en el que se reúne el colectivo Feminismos Tetuán?",
+      "opciones": ["Calle Coruña", "Calle Teruel", "Calle Villaamil", "Calle Jaén"],
+      "correcta": 0
+    },
+    {
+      "id": 81,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué personaje literario de Cervantes tiene una calle en Tetuán?",
+      "opciones": ["Dulcinea", "Aldonza", "Fortunata", "Marianela"],
+      "correcta": 0
+    },
+    {
+      "id": 82,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué figura financió la construcción de la iglesia de San Antonio de Bravo Murillo y tiene una plaza o calle dedicada en Tetuán?",
+      "opciones": ["Condesa de la Gavia", "Bravo Murillo", "La Remonta", "Infanta Mercedes"],
+      "correcta": 0
+    },
+    {
+      "id": 83,
+      "categoria": "feminismo",
+      "pregunta": "¿En qué año nació la huerta de Tetuán?",
+      "opciones": ["2013", "Siglo III A.C.", "2001", "2020"],
+      "correcta": 0
+    },
+    {
+      "id": 84,
+      "categoria": "feminismo",
+      "pregunta": "¿Qué escritora del siglo XVII da nombre a una calle, una travesía y un centro de servicios sociales en Tetuán?",
+      "opciones": [
+        "Concepción Arenal",
+        "Emilia Pardo Bazán",
+        "Santa Teresa de Jesús",
+        "María de Zayas"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": 85,
       "categoria": "arte_urbano",
       "pregunta": "¿Qué característica hace del barrio de Tetuán un espacio especialmente atractivo para el arte urbano?",
       "opciones": [
@@ -225,11 +874,10 @@
         "Sus túneles de metro",
         "Sus puentes sobre el río"
       ],
-      "correcta": 1,
-      "curiosidad": "Las medianeras —paredes laterales de los edificios sin ventanas— son el lienzo favorito de los muralistas urbanos. Tetuán tiene muchas por su tipología constructiva."
+      "correcta": 1
     },
     {
-      "id": 17,
+      "id": 86,
       "categoria": "arte_urbano",
       "pregunta": "¿Qué tipo de mensaje suelen transmitir los murales de contenido social en barrios como Tetuán?",
       "opciones": [
@@ -238,8 +886,66 @@
         "Promoción turística",
         "Historia oficial del barrio"
       ],
-      "correcta": 1,
-      "curiosidad": "El arte urbano de contenido social convierte las paredes en herramienta de denuncia y visibilización de luchas colectivas."
+      "correcta": 1
+    },
+    {
+      "id": 87,
+      "categoria": "arte_urbano",
+      "pregunta": "¿Quién es el autor del mural más grande que hay en la plaza Leopoldo de Luis, que representa una sombra enorme compuesta por otras sombras?",
+      "opciones": ["Suso33", "El Rey de la Ruina", "Borondo", "El Muelle"],
+      "correcta": 0
+    },
+    {
+      "id": 88,
+      "categoria": "arte_urbano",
+      "pregunta": "De todos estos grafiteros famosos, ¿cuál vive en el barrio?",
+      "opciones": ["Suso33", "El Rey de la Ruina", "Borondo", "El Muelle"],
+      "correcta": 1
+    },
+    {
+      "id": 89,
+      "categoria": "arte_urbano",
+      "pregunta": "¿Qué barrio de Tetuán destaca por la cantidad de grafitis de flores en sus muros y alcantarillas?",
+      "opciones": ["Berruguete", "Ventilla", "Bellas Vistas", "Cuatro Caminos"],
+      "correcta": 0
+    },
+    {
+      "id": 90,
+      "categoria": "arte_urbano",
+      "pregunta": "¿Qué simboliza un grafiti con una pareja de espaldas, que está en Marqués de Viana y del que ha desaparecido una de las 2 personas?",
+      "opciones": [
+        "La censura y la autocensura",
+        "Las relaciones tóxicas",
+        "Una detención policial",
+        "Un secuestro"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": 91,
+      "categoria": "arte_urbano",
+      "pregunta": "En la calle Almortas hay una instalación artística de SpY compuesta por cámaras de seguridad. ¿Cuántas tiene?",
+      "opciones": ["150", "13.000", "25", "60"],
+      "correcta": 0
+    },
+    {
+      "id": 92,
+      "categoria": "arte_urbano",
+      "pregunta": "¿De qué famoso grafitero, fallecido en 1995, se conserva una firma en el local de ensayos de la calle Tablada?",
+      "opciones": ["El Muelle", "Banksy", "Suso33", "Borondo"],
+      "correcta": 0
+    },
+    {
+      "id": 93,
+      "categoria": "arte_urbano",
+      "pregunta": "¿Cuál de estos elementos NO es característico de las obras de El Rey de la Ruina, grafitero de Tetuán?",
+      "opciones": [
+        "Siluetas negras",
+        "Corazones con lemas en su interior",
+        "Murales con tramas de colores fuertes",
+        "Frases reflexivas y paradójicas"
+      ],
+      "correcta": 0
     }
   ]
 }
